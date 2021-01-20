@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,18 +15,21 @@ import java.util.List;
 public class Professeur extends Personne{
      private String grade;
      private List<String> modules=new ArrayList ();
-
+     private String matricule;
     public Professeur() {
+        type="Etudiant";
     }
 
     public Professeur(String grade, int id, String NomComplet) {
         super(id, NomComplet);
         this.grade = grade;
+         type="Etudiant";
     }
 
     public Professeur(String grade, String NomComplet) {
         super(NomComplet);
         this.grade = grade;
+         type="Etudiant";
     }
 
     
@@ -67,6 +70,17 @@ public class Professeur extends Personne{
     public void setModules(List<String> modules) {
         this.modules = modules;
     }
+
+    public String getMatricule() {
+        return matricule;
+    }
+
+    public void setMatricule(String matricule) {
+        this.matricule = matricule;
+    }
+    
+    
+    
 
    
      

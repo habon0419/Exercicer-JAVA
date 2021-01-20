@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package models;
 
 /**
  *
@@ -12,7 +12,9 @@ package model;
 public abstract class Personne {
     protected int id ;
     protected String NomComplet;
-    
+    protected String type;
+    protected String login;
+    protected String pwd;
     
      //Defaut
 
@@ -48,6 +50,32 @@ public abstract class Personne {
     public String toString() {
         return "Personne{" + "id=" + id + ", NomComplet=" + NomComplet + '}';
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
+
+   
 
   
     

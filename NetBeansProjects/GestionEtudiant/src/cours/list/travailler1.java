@@ -7,7 +7,7 @@ package cours.list;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Personne;
+import models.Personne;
 
 /**
  *

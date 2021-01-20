@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package models;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class Details {
     private String annee;
-    private List<String> modules=new ArrayList ();
+    private List<String> modules;
     //ManytoOne
     private Classe Classe ;
     private Professeur professeur;
@@ -26,6 +26,23 @@ public class Details {
     public Details() {
     }
 
+    public Details(Classe Classe, Professeur professeur) {
+        this.Classe = Classe;
+        this.professeur = professeur;
+    }
+
+    
+    
+    public Details(String annee, List<String> modules, Classe Classe, Professeur professeur) {
+        this.annee = annee;
+        this.modules = modules;
+        this.Classe = Classe;
+        this.professeur = professeur;
+    }
+    
+    
+    
+    
     public String getAnnee() {
         return annee;
     }
