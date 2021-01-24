@@ -13,27 +13,28 @@ import java.util.List;
  * @author habon
  */
 public class Professeur extends Personne{
+    
      private String grade;
-     private List<String> modules=new ArrayList ();
-     private String matricule;
+    private List<String> modules=new ArrayList();
+    private String matricule;
     public Professeur() {
-        type="Etudiant";
+        type="Professeur";
     }
 
-    public Professeur(String grade, int id, String NomComplet) {
-        super(id, NomComplet);
+    public Professeur(String grade, String nomComplet) {
+        super(nomComplet);
         this.grade = grade;
-         type="Etudiant";
+        type="Professeur";
     }
 
-    public Professeur(String grade, String NomComplet) {
-        super(NomComplet);
+    public Professeur(String grade, int id, String nomComplet) {
+        super(id, nomComplet);
         this.grade = grade;
-         type="Etudiant";
+        type="Professeur";
     }
 
     
-
+    
     public String getGrade() {
         return grade;
     }
@@ -42,25 +43,9 @@ public class Professeur extends Personne{
         this.grade = grade;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNomComplet() {
-        return NomComplet;
-    }
-
-    public void setNomComplet(String NomComplet) {
-        this.NomComplet = NomComplet;
-    }
-
     @Override
     public String toString() {
-        return super.toString()+"Grade:"+grade; //To change body of generated methods, choose Tools | Templates.
+        return super.toString()+"Grade: "+grade; //To change body of generated methods, choose Tools | Templates.
     }
 
     public List<String> getModules() {
@@ -78,11 +63,9 @@ public class Professeur extends Personne{
     public void setMatricule(String matricule) {
         this.matricule = matricule;
     }
+     
     
     
-    
-
-   
      
     
 }

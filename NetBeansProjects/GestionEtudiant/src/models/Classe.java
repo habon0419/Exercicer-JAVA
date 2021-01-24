@@ -10,18 +10,18 @@ package models;
  * @author habon
  */
 public class Classe {
-    private int id ;
+  
+     private int id;
     private String libelle;
-    private int nbre ;
-    
+    private int nbre;
     
     //Defaut
 
     public Classe() {
     }
+
     
-    
-    //surcharge 
+     //surcharge 
     
     // select
     public Classe(int id, String libelle, int nbre) {
@@ -29,14 +29,19 @@ public class Classe {
         this.libelle = libelle;
         this.nbre = nbre;
     }
-
+//insert
     public Classe(String libelle, int nbre) {
         this.libelle = libelle;
         this.nbre = nbre;
     }
-    
-    
 
+    public Classe(int id) {
+        this.id = id;
+    }
+
+    
+    
+    
     public int getId() {
         return id;
     }
@@ -65,7 +70,8 @@ public class Classe {
     public String toString() {
         return "Classe{" + "id=" + id + ", libelle=" + libelle + ", nbre=" + nbre + '}';
     }
-    
+
+   
     
     
     

@@ -20,7 +20,9 @@ import java.util.logging.Logger;
  */
 public class DaoMysql {
     
-     private Connection conn=null;
+    //objet de connexion
+    private Connection conn=null;
+    //Excuter les requetes
     PreparedStatement ps=null;
 
     public PreparedStatement getPs() {
@@ -76,10 +78,6 @@ public class DaoMysql {
         } catch (SQLException ex) {
             Logger.getLogger(DaoMysql.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    int executeMisAjour() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
